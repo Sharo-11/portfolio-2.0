@@ -1,4 +1,8 @@
 /* Hero.css */
+*{
+    font-family: "Space Mono", monospace;
+}
+
 .hero-container {
     position: relative;
     height: 100vh;

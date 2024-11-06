@@ -5,15 +5,14 @@ import './styles/Learnings.css';
 
 const Learnings = () => {
   const learningsData = [
-    { id: 1, title: 'React Fundamentals', description: 'Learned how to build interactive UIs with React.' },
-    { id: 2, title: 'CSS Flexbox & Grid', description: 'Mastered layout techniques to create responsive designs.' },
-    { id: 3, title: 'JavaScript ES6+ Features', description: 'Familiar with the latest features in JavaScript such as arrow functions, async/await, and destructuring.' },
-    { id: 4, title: 'Responsive Web Design', description: 'Developed skills to create websites that work on any device.' },
-    { id: 5, title: 'Version Control with Git', description: 'Learned to manage code with Git and GitHub.' },
-    { id: 6, title: 'API Integration and Fetch', description: 'Understood how to fetch data from APIs and display it dynamically.' },
-    { id: 7, title: 'Node.js & Express Basics', description: 'Explored server-side programming with Node.js and Express.' },
+    { id: 1, title: 'Basics of Cyber', description: 'Took offline classes where I built a strong foundation in cybersecurity. Learned the basics of Linux commands, which are essential for navigating and securing systems. Explored various operating systems used in hacking, including Kali Linux, Parrot, and Backtrack, gaining hands-on experience with these powerful tools. This course sparked my passion for ethical hacking and cybersecurity, providing me with the skills to dig deeper into system vulnerabilities.', date: '2019' },
+    { id: 2, title: 'Python Development', description: 'Built foundational projects in Python, including a notepad, music player, and calculator. These projects helped me hone my skills in Python basics and understand how to use various libraries to create functional applications. This experience laid the groundwork for exploring more advanced concepts and building more complex projects in the future.', date: '2021' },
+    { id: 3, title: 'Web Development', description: 'Gained hands-on experience in building dynamic web applications using Python-based frameworks like Flask and front-end technologies such as React. Focused on creating interactive, responsive websites by leveraging Flask for backend development and React for building modern user interfaces. This helped me build a solid foundation in full-stack web development and sharpened my skills in integrating frontend and backend technologies effectively.', date: '2022' },
+    { id: 4, title: 'Cybersecurity Internship', description: 'During my virtual internship at "Tutelr," I gained hands-on experience in penetration testing, red teaming, and digital forensics. I worked with tools such as Syngsong, Hashcat, and zxcvbn to sharpen my skills in password cracking and security assessments. I also explored Configuration Hardening Assessment with PowerShell Script (CHAPS) and used SIFT Workstation for Digital Forensics and Incident Response. This internship significantly strengthened my understanding of key cybersecurity concepts and techniques.', date: '2023' },
+    { id: 5, title: 'SANS Webinar', description: 'I successfully completed the "Ransomware Summit 2023" webinar hosted by the SANS Institute on June 23, 2023. This online course focused on specialized knowledge and applications in the field of cybersecurity, specifically ransomware threats. The summit offered valuable insights into ransomware attack tactics, prevention strategies, and response protocols. It was a live event that earned me 6 CPE credits, enhancing my expertise in combating ransomware and advancing my understanding of the evolving cybersecurity landscape.', date: '2023' },
+    { id: 6, title: 'Preparing for eJPT Exam', description: 'I am actively preparing for the eJPT (Junior Penetration Tester) certification, which involves gaining hands-on skills in real-world penetration testing scenarios. To strengthen my knowledge, I am engaging in platforms like TryHackMe, PicoCTF, and PortSwigger. These platforms are helping me sharpen my skills in areas such as vulnerability exploitation, web application attacks, network security, and penetration testing methodologies, giving me a solid foundation in cybersecurity and Red Team techniques.', date: 'Jun 2024' },
   ];
-
+  
   // State to keep track of the selected learning
   const [selectedLearning, setSelectedLearning] = useState(learningsData[0]);
 
@@ -33,10 +32,22 @@ const Learnings = () => {
               <VerticalTimelineElement
                 key={learning.id}
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgba(255, 255, 255, 0.1)', color: '#fff' }}
-                contentArrowStyle={{ borderRight: '7px solid rgba(255, 255, 255, 0.1)' }}
-                date="2024"
-                iconStyle={{ background: '#6a0dad', color: '#fff' }}
+                // contentStyle={{
+                //   background: 'rgba(255, 255, 255, 0.1)',
+                //   color: '#fff',
+                // }}
+                contentArrowStyle={{
+                  borderRight: '7px solid rgba(255, 255, 255, 0.1)',
+                }}
+                date={learning.date}
+                iconStyle={{ 
+                  background: 'black', 
+                  color: '#fff',
+                  width: '15px',  
+                  height: '15px',
+                  marginLeft: '-6px',
+                  marginTop: '15px',
+                }}
               >
                 {/* Wrapping title in a div with onClick to ensure it's clickable */}
                 <div onClick={() => handleLearningClick(learning)} style={{ cursor: 'pointer' }}>

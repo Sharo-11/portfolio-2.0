@@ -1,3 +1,7 @@
+*{
+  font-family: "Space Mono", monospace;
+}
+
 .learnings-section {
   background: linear-gradient(0deg,rgb(0, 0, 0)66%,#641879 );
   color: #fff;
@@ -5,6 +9,36 @@
   min-height: 100vh;
   /* padding-top: 2rem; */
 }
+
+#title_over{
+  text-align: center;
+  font-family: "Space Mono";
+  font-size: 3rem;
+}
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: rgb(186, 2, 223);
+}
+
+.vertical-timeline-element-content {
+  background: rgba(0, 85, 0, 0.199);
+  color: #fff;  /* Make the text white for better contrast */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding for spacing */
+  box-shadow: 0 7px 70px rgba(255, 0, 255, 0.3); /* Shadow with spread */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: scale(1.05); /* Scale the element by 5% */
+  box-shadow: 0 13px 80px rgba(255, 0, 255, 0.411); /* Increase shadow intensity when hovered */
+}
+
 
 .learnings-section #title_over{
   margin-bottom: 2rem;
@@ -47,3 +81,4 @@
   line-height: 1.6;
   color: #e0e0e0;
 }
+

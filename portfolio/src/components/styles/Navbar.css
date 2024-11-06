@@ -1,3 +1,7 @@
+*{
+  font-family: "Space Mono", monospace;
+}
+
 /* Navbar styling */
 .navbar {
   display: flex;

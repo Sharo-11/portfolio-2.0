@@ -1,3 +1,7 @@
+*{
+    font-family: "Space Mono", monospace;
+}
+
 /* Set the main section with a gradient background */
 .projects-container {
     background: linear-gradient(0deg, #441152, black); /* Purple to black gradient */
@@ -34,8 +38,8 @@
 .project-card {
     background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for glassmorphic effect */
     border-radius: 8px;
-    width: 350px; /* Increase width */
-    height: 400px; /* Add a fixed height */
+    width: 25rem; /* Increase width */
+    height: auto; /* Add a fixed height */
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -76,7 +80,7 @@
 
 /* Styling for the project link with hover effect */
 .project-link {
-    color: #72ff47; /* Green color for contrast */
+    color: rgb(167, 91, 182);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;

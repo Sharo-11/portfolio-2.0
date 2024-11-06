@@ -1,0 +1,135 @@
+*{
+  font-family: "Space Mono", monospace;
+}
+
+/* Report.js styling */
+.reports-container {
+    background: linear-gradient(180deg, #441152, black); /* Purple to black gradient */
+    color: #fff;
+    min-height: 120vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+  }
+  
+  /* Center the heading */
+  .heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Main content section */
+  .reports-content {
+    display: flex;
+    flex-direction: row; /* Align left and right sections side by side */
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px; /* Adjust for larger screen sizes */
+    gap: 40px; /* Space between left and right sections */
+  }
+  
+  /* Left section container */
+  .reports-left {
+    width: 40%; /* Set width for the left section */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  /* Report list container */
+  .report-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Styling for each report title */
+  .report-title {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    max-width: 350px; /* Limit the width of the title for better look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Hover effect for report titles */
+  .report-title:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+  }
+  
+  /* Right section container */
+  .reports-right {
+    width: 55%; /* Right section takes more space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  /* Styling for the report description */
+  .report-description {
+    background: rgba(255, 255, 255, 0.1); /* White opaque background */
+    padding: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect behind the content */
+    color: #fff;
+    width: 100%;
+    max-width: 800px;
+    position: relative; /* Allows absolute positioning of the button */
+  }
+  
+  .report-description h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .report-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+  }
+  
+  /* View Full Report button styling */
+  .view-full-report {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #441152; /* Purple background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-full-report:hover {
+    background-color: #72ff47; /* Green on hover */
+  }
+  
+  /* Styling for the message when no report is selected */
+  .select-report {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 50px 0;
+    font-style: italic;
+  }
+  

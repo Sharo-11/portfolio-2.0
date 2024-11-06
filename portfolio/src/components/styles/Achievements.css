@@ -1,0 +1,146 @@
+/* Overall section styling */
+#achievements {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+#achievements h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Container for the carousel */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #fff;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+/* Slide container */
+#slide {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* Individual slide item styling */
+.item {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  transition: transform 1s ease-in-out;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item .content {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  color: #fff;
+  text-align: left;
+  z-index: 1;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item .des {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.item button {
+  background-color: #bac383;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.item button:hover {
+  background-color: #9e9e2b;
+}
+
+/* Navigation buttons */
+.buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.buttons button {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0 10px;
+}
+
+.buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Fade-in effect for the content inside each slide */
+@keyframes showContent {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item .name,
+.item .des,
+.item button {
+  animation: showContent 1s ease-out;
+}
+
+.item .name {
+  animation-delay: 0.3s;
+}
+
+.item .des {
+  animation-delay: 0.6s;
+}
+
+.item button {
+  animation-delay: 0.9s;
+}
