@@ -1,0 +1,49 @@
+.learnings-section {
+  background: linear-gradient(0deg,rgb(0, 0, 0)66%,#641879 );
+  color: #fff;
+  padding: 12rem 2rem 2rem 2rem;
+  min-height: 100vh;
+  /* padding-top: 2rem; */
+}
+
+.learnings-section #title_over{
+  margin-bottom: 2rem;
+
+}
+
+.learnings-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.timeline-column {
+  flex: 1;
+  max-width: 50%;
+}
+
+.description-column {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.description-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  color: #fff;
+  width: 100%;
+}
+
+.description-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.description-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}

@@ -1,0 +1,88 @@
+/* Set the main section with a gradient background */
+.projects-container {
+    background: linear-gradient(0deg, #441152, black); /* Purple to black gradient */
+    color: #ffffff;
+    min-height: 120vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center; /* Center content vertically */
+    width: 100%;
+    overflow : hidden;
+}
+
+/* Styling for the section heading */
+.heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+/* Container for the project cards */
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 90%; /* Larger width to fill more of the page */
+    max-width: 1400px; /* Adjust max-width to increase size */
+}
+
+/* Individual project card styling */
+.project-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for glassmorphic effect */
+    border-radius: 8px;
+    width: 350px; /* Increase width */
+    height: 400px; /* Add a fixed height */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Lift effect and slight background color change on hover */
+.project-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Styling for the project image */
+.project-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Content area for project title and description */
+.project-content {
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.project-description {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #cccccc;
+}
+
+/* Styling for the project link with hover effect */
+.project-link {
+    color: #72ff47; /* Green color for contrast */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
