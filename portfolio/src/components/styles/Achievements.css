@@ -76,8 +76,10 @@
   left: 100px;
   width: 300px;
   text-align: left;
-  padding: 0;
-  color: #eee;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  color: #ffffff;
+  background: #000000a4;
   transform: translate(0, -50%);
   display: none;
   font-family: system-ui;

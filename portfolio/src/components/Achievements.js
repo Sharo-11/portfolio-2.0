@@ -3,10 +3,8 @@ import './styles/Achievements.css';
 
 const Achievements = () => {
   const [items, setItems] = useState([
-    { backgroundImage: require('./assets/images/ChatBot.png'), name: 'Adaptable Expertise', des: 'Versatile In Web Technologies And Proficient In Frameworks Like React, Flask, And Django' },
-    { backgroundImage: require('./assets/images/bg.jpg'), name: 'Diverse Portfolio', des: 'Successful Projects Include E-Commerce Platforms And Content-Rich Agency Websites.' },
-    { backgroundImage: require('./assets/images/ChatBot.png'), name: 'Passion for Excellence', des: 'Driven By A Strong Creative Problem-Solving Approach And Commitment To Client Success.' },
-    { backgroundImage: require('./assets/images/bg.jpg'), name: 'Project Management and Timely Delivery', des: 'Our commitment to project management and timely delivery is the cornerstone of our success. We understand the importance of efficient project management in delivering exceptional web solutions.' }
+    { backgroundImage: require('./assets/images/SANS_Webinar.jpg'), name: 'Adaptable Expertise', des: 'Versatile In Web Technologies And Proficient In Frameworks Like React, Flask, And Django' },
+    { backgroundImage: require('./assets/images/TSEC_Hackathon.jpg'), name: 'Diverse Portfolio', des: 'Successful Projects Include E-Commerce Platforms And Content-Rich Agency Websites.' },
   ]);
 
   const nextSlide = () => {
@@ -26,7 +24,7 @@ const Achievements = () => {
           <div
             key={index}
             className={`ach-item ${index === 1 ? 'ach-current' : ''}`}
-            style={{ backgroundImage: `url(${item.backgroundImage})` }}
+            style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 56%, rgba(0, 0, 0, 0)), url(${item.backgroundImage})` }}
           >
             <div className="ach-content">
               <div className="ach-name">{item.name}</div>

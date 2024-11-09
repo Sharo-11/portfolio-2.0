@@ -15,7 +15,7 @@ const Hero = () => {
       <Navbar />
       <div className="hero-content">
         <img src={profileImage} alt="Profile" className="profile-image" />
-        <a href="#contact" className="footer_target"><button className="contact-button">Contact me</button></a>
+        <a href="https://r30repa2dbw.typeform.com/to/YLSXeQkH" className="footer_target"><button className="contact-button">Contact me</button></a>
         <div className="terminal">
           <div className="terminal-header">
             <div className='folders'>

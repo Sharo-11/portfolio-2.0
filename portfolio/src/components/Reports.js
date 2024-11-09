@@ -6,22 +6,17 @@ const reportData = [
   {
     title: "CHAPS",
     description: "Configuration Hardening Assessment with PowerShell(CHAPS). This report provides an assessment of system security settings on Windows machines using the CHAPS PowerShell script. It highlights key findings, such as missing BitLocker encryption, insufficient PowerShell logging, and improper credential settings. The report also offers recommendations for improving system security, such as enabling BitLocker and configuring Credential Guard, along with detailed execution steps and screenshots for clarity.",
-    fullReport: "This report presents an in-depth analysis of system security settings conducted using the CHAPS PowerShell script. The CHAPS script is an automated tool that scans Windows machines to assess their security configuration, highlighting areas that may pose security risks. The following sections detail the execution process, key findings, and remediation recommendations."
+    fullReport: "https://drive.google.com/file/d/1Rw57Ft2CLUMu3slu18O_Jc9sU37DcFLW/view?usp=sharing"
   },
   {
-    title: "Report 2",
-    description: "Description for Report 2. This report talks about the vulnerabilities discovered in a specific application and its potential impacts.",
-    fullReport: "Full Report content for Report 2 would go here. It explains the application vulnerabilities in detail."
+    title: "SIFT",
+    description: "The SANS Investigative Forensic Toolkit (SIFT) is a comprehensive suite of tools used for digital forensic analysis and incident response on Linux systems. This toolkit allows investigators to perform detailed analyses of disk images, file systems, and memory captures, which can help uncover crucial information in digital investigations. Key findings may include identifying deleted files, examining system logs, and analyzing network connections. This report provides actionable insights and recommended steps for further investigation, with clear execution steps and screenshots for better understanding.",
+    fullReport: "https://drive.google.com/file/d/1_XIqnrcwgaLAAs-OabI1wXZRGUCKMy4Q/view?usp=sharing"
   },
   {
-    title: "Report 3",
-    description: "This report focuses on the detailed analysis of cyberattack strategies used in recent events and how to mitigate them.",
-    fullReport: "Full Report content for Report 3 would go here. It discusses mitigation strategies for cyberattacks."
-  },
-  {
-    title: "Report 4",
-    description: "Report 4 contains analysis of different security incidents that happened over the last year and recommendations for improvement.",
-    fullReport: "Full Report content for Report 4 would go here. It provides recommendations based on security incidents."
+    title: "Penetration Testing",
+    description: "This report details the penetration testing and red teaming methodologies used to identify vulnerabilities and assess security defenses within an organization’s infrastructure. The tools and techniques included in this report focus on various aspects of offensive security, from reconnaissance and exploitation to post-exploitation activities. Key tools used in this assessment include Syngsong for initial introduction and testing, Hashcat for password cracking, and zxcvbn for password strength analysis. Each tool’s usage, key findings, and improvement recommendations are provided with detailed execution steps and screenshots.",
+    fullReport: "https://drive.google.com/file/d/1FJC18j6aZK8O8J9bdIHW3b0rjaJmMlPW/view?usp=sharing"
   }
 ];
 
@@ -33,7 +28,9 @@ const Reports = () => {
   };
 
   const handleViewFullReport = () => {
-    alert(selectedReport.fullReport); // You can replace this with navigation to another page or modal to show the full report
+    if (selectedReport && selectedReport.fullReport) {
+      window.location.replace(selectedReport.fullReport);
+    }
   };
 
   return (
