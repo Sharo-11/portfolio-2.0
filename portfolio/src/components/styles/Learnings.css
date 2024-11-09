@@ -39,7 +39,23 @@
   box-shadow: 0 13px 80px rgba(255, 0, 255, 0.411); /* Increase shadow intensity when hovered */
 }
 
+.certificate-button{
+  padding: 10px 20px;
+  background-color: #441152; /* Purple background */
+  width: 30%;
+  margin-top: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.certificate-button:hover{
+  background-color: aliceblue;
+  color: black;
+}
 .learnings-section #title_over{
   margin-bottom: 2rem;
 

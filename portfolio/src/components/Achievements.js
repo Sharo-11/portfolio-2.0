@@ -3,8 +3,8 @@ import './styles/Achievements.css';
 
 const Achievements = () => {
   const [items, setItems] = useState([
-    { backgroundImage: require('./assets/images/SANS_Webinar.jpg'), name: 'Adaptable Expertise', des: 'Versatile In Web Technologies And Proficient In Frameworks Like React, Flask, And Django' },
-    { backgroundImage: require('./assets/images/TSEC_Hackathon.jpg'), name: 'Diverse Portfolio', des: 'Successful Projects Include E-Commerce Platforms And Content-Rich Agency Websites.' },
+    { backgroundImage: require('./assets/images/SANS_Webinar.jpg'), name: 'SANS Webinar', des: 'Enhanced cybersecurity knowledge through advanced techniques in threat detection and defense strategies. Covered key concepts in digital forensics and incident response.', cert_url : "https://drive.google.com/file/d/1gb211ZGlKqwCDcKHyJdN0MMDyPocuF1T/view?usp=sharing" },
+    { backgroundImage: require('./assets/images/TSEC_Hackathon.jpg'), name: 'TSEC Hackathon', des: 'Collaborated with a team to develop creative solutions to real-world challenges. Focused on efficient coding practices and delivered a working prototype within a competitive timeframe.', cert_url: "https://drive.google.com/file/d/1n0UboWDNdbodq-AQVNqyWbSNO4RgqtKO/view?usp=sharing" },
   ]);
 
   const nextSlide = () => {
@@ -14,6 +14,10 @@ const Achievements = () => {
   const prevSlide = () => {
     setItems((prevItems) => [prevItems[prevItems.length - 1], ...prevItems.slice(0, -1)]);
   };
+  const handleClick = (cert_url) => {
+    window.location.href = cert_url;
+  };
+  
 
   return (
     <section id="achievements" className="ach-section">
@@ -29,7 +33,7 @@ const Achievements = () => {
             <div className="ach-content">
               <div className="ach-name">{item.name}</div>
               <div className="ach-des">{item.des}</div>
-              <button>See more</button>
+              <button onClick={() => handleClick(item.cert_url)}>View</button>
             </div>
           </div>
         ))}
