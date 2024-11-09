@@ -5,14 +5,13 @@ import {
   FaPhone,
   FaMailBulk,
   FaLinkedin,
-  FaInstagram,
   FaGithub,
 } from 'react-icons/fa'
 import {SiTryhackme} from 'react-icons/si'
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <div className='footer' id='contact'>
       <div className='footer-container'>
         <div className='left'>
           <div className='location'>

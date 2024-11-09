@@ -4,7 +4,7 @@
 
 /* Report.js styling */
 .reports-container {
-    background: linear-gradient(180deg, #441152, black); /* Purple to black gradient */
+    background: linear-gradient(180deg, #441152, black 66%); /* Purple to black gradient */
     color: #fff;
     min-height: 120vh; 
     display: flex;
@@ -27,11 +27,11 @@
   /* Main content section */
   .reports-content {
     display: flex;
-    flex-direction: row; /* Align left and right sections side by side */
+    align-items:center ;
     justify-content: space-between;
     width: 100%;
+    height: 50vh;
     max-width: 1400px; /* Adjust for larger screen sizes */
-    gap: 40px; /* Space between left and right sections */
   }
   
   /* Left section container */
@@ -39,9 +39,9 @@
     width: 40%; /* Set width for the left section */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
   
   /* Report list container */
@@ -49,7 +49,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    height: 100%;
+    gap: 3rem;
   }
   
   /* Styling for each report title */
@@ -85,7 +86,10 @@
   /* Styling for the report description */
   .report-description {
     background: rgba(255, 255, 255, 0.1); /* White opaque background */
+    box-shadow: 0 10px 30px rgba(255, 0, 255, 0.411);
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     border-radius: 8px;
     backdrop-filter: blur(10px); /* Optional: Adds a blur effect behind the content */
     color: #fff;
@@ -107,11 +111,13 @@
   
   /* View Full Report button styling */
   .view-full-report {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    /* position: absolute; */
+    /* bottom: 20px;
+    right: 20px; */
     padding: 10px 20px;
     background-color: #441152; /* Purple background */
+    width: 30%;
+    margin-top: 1rem;
     color: #fff;
     border: none;
     border-radius: 5px;

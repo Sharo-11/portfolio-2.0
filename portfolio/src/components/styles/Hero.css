@@ -44,9 +44,8 @@
     position: relative;
     z-index: 100; /* Ensure this content is on top of the background and overlay */
     display: flex;
-    flex-direction: row; /* Use row to align items horizontally */
     align-items: center;
-    gap: 20vw; /* Increased space between the profile image and content */
+    gap: 5vw; /* Increased space between the profile image and content */
     justify-content: center;
 }
 

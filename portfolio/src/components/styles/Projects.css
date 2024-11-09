@@ -4,7 +4,7 @@
 
 /* Set the main section with a gradient background */
 .projects-container {
-    background: linear-gradient(0deg, #441152, black); /* Purple to black gradient */
+    background: linear-gradient(0deg, #441152, black 66%); /* Purple to black gradient */
     color: #ffffff;
     min-height: 120vh; /* Full viewport height */
     display: flex;
@@ -29,19 +29,18 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 90%; /* Larger width to fill more of the page */
-    max-width: 1400px; /* Adjust max-width to increase size */
 }
 
 /* Individual project card styling */
 .project-card {
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for glassmorphic effect */
+    background: rgba(43, 43, 43, 0.555); /* Semi-transparent background for glassmorphic effect */
     border-radius: 8px;
     width: 25rem; /* Increase width */
     height: auto; /* Add a fixed height */
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 13px 80px rgba(255, 0, 255, 0.411);
     transition: transform 0.3s ease, background-color 0.3s ease;
     color: #ffffff;
     text-align: center;

@@ -8,6 +8,8 @@ import Achievements from './components/Achievements';
 import Footer from './components/Footer'
 import './components/styles/App.css';
 import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 function App() {
   return (

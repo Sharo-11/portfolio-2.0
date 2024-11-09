@@ -1,146 +1,142 @@
-/* Overall section styling */
-#achievements {
-  padding: 50px 0;
-  background-color: #f5f5f5;
-  text-align: center;
-}
-
-#achievements h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 30px;
-}
-
-/* Container for the carousel */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px;
-  background-color: #fff;
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-}
-
-/* Slide container */
-#slide {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%;
+.ach-section {
+  background: linear-gradient(0deg, rgb(0, 0, 0),#641879, rgb(0, 0, 0) 66% ) !important;
   overflow: hidden;
-  margin-top: 20px;
-}
-
-/* Individual slide item styling */
-.item {
-  position: absolute;
-  width: 300px;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
-  transition: transform 1s ease-in-out;
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
-  opacity: 0.8;
+  padding: 150px 0px 0px 0px; /* Add padding to create space around the section */
+  position: relative; /* Make .ach-section the positioning context */
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-
-.item .content {
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
-  color: #fff;
-  text-align: left;
-  z-index: 1;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.item .name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.item .des {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.item button {
-  background-color: #bac383;
-  border: none;
-  padding: 10px 20px;
+  height: 100vh;
   color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 5px;
 }
 
-.item button:hover {
-  background-color: #9e9e2b;
+.ach-container {
+  position: absolute; /* Position absolutely, but within the .ach-section */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 600px;
+  padding: 50px;
+  margin-top: 2vw;
+  background-color: linear-gradient(0deg,rgb(0, 0, 0)66%,#641879 );
+  box-shadow: 0px 0px 90px 25px rgba(255, 0, 255, 0.3);
 }
 
-/* Navigation buttons */
-.buttons {
+.ach-slide {
+  width: max-content;
+  margin-top: 50px;
+}
+
+.ach-item {
+  width: 200px;
+  height: 300px;
+  background-position: 50% 50%;
+  display: inline-block;
+  transition: 0.5s;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
+}
+
+.ach-item:nth-child(1),
+.ach-item:nth-child(2) {
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+}
+
+.ach-item:nth-child(3) {
+  left: 50%;
+}
+
+.ach-item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+
+.ach-item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+
+.ach-item:nth-child(n+6) {
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+.ach-content {
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
-  transform: translate(-50%, -50%);
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  padding: 0;
+  color: #eee;
+  transform: translate(0, -50%);
+  display: none;
+  font-family: system-ui;
 }
 
-.buttons button {
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+.ach-item.ach-current .ach-content {
+  display: block;
+  z-index: 11111;
+}
+
+.ach-name {
+  font-size: 40px;
+  font-weight: bold;
+  opacity: 0;
+  animation: ach-showcontent 1s ease-in-out 1 forwards;
+}
+
+.ach-des {
+  margin: 20px 0;
+  opacity: 0;
+  animation: ach-showcontent 1s ease-in-out 0.3s 1 forwards;
+}
+
+.ach-item button {
+  padding: 10px 20px;
   border: none;
-  font-size: 2rem;
-  padding: 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-  margin: 0 10px;
+  opacity: 0;
+  animation: ach-showcontent 1s ease-in-out 0.6s 1 forwards;
 }
 
-.buttons button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Fade-in effect for the content inside each slide */
-@keyframes showContent {
+@keyframes ach-showcontent {
   from {
-    opacity: 0;
-    transform: translateY(100px);
+      opacity: 0;
+      transform: translate(0, 100px);
+      filter: blur(33px);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+      opacity: 1;
+      transform: translate(0, 0);
+      filter: blur(0);
   }
 }
 
-.item .name,
-.item .des,
-.item button {
-  animation: showContent 1s ease-out;
+.ach-buttons {
+  position: absolute;
+  bottom: 30px;
+  z-index: 222222;
+  text-align: center;
+  width: 100%;
 }
 
-.item .name {
-  animation-delay: 0.3s;
+.ach-buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #555;
+  transition: 0.5s;
 }
 
-.item .des {
-  animation-delay: 0.6s;
-}
-
-.item button {
-  animation-delay: 0.9s;
+.ach-buttons button:hover {
+  background-color: #bac383;
 }
