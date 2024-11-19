@@ -1,40 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=VT323&display=swap');
 
-*{
+* {
   font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
-  
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Navigation Styles */
 nav {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    padding: 1rem;
-    text-align: center;
-  }
-  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #aaa;
+}
+
+/* Section Styles */
+.section {
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.section button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.section button:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-  
-  .section {
-    padding: 2rem;
-    min-height: 100vh;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 0.5rem;
   }
-  
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .section button {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .section h1 {
+    font-size: 1.5rem;
+  }
+
+  .section p {
+    font-size: 0.9rem;
+  }
+
+  .section button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,4 +1,4 @@
-*{
+* {
   font-family: "Space Mono", monospace;
 }
 
@@ -17,14 +17,14 @@
   width: 90vw; /* Adjust width to auto for centering */
 }
 
-.nav-links{
+.nav-links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4vw;
 }
 
-.logo .name{
+.logo .name {
   font-family: 'Space Mono';
   font-size: 2vw;
   font-weight: 700;
@@ -53,10 +53,115 @@
     flex-direction: column;
     gap: 1.5em; /* Adjust gap when navbar items are stacked */
     top: 5vh; /* Adjust the position for smaller screens */
+    padding: 1rem; /* Reduce padding for better fit */
+    width: 80vw; /* Make navbar width a bit smaller */
+    left: 50%;
+    transform: translateX(-50%); /* Center the navbar */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: center; /* Center items */
+    gap: 1.2em; /* Space between items */
+    display: none; /* Hide links by default for mobile view */
+    width: 100%; /* Make nav links take full width */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when the menu is active */
   }
 
   .nav-item {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Increase font size for readability */
     padding: 1.2em 2.5em;
+    text-align: center; /* Center-align text */
+    border-radius: 1.5em; /* Round the corners a bit more */
+  }
+
+  .logo .name {
+    font-size: 4vw; /* Adjust logo size for smaller screens */
+    margin-bottom: 1rem; /* Space between logo and navbar items */
+  }
+
+  /* Hamburger icon */
+  .hamburger-menu {
+    display: block;
+    width: 35px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px; /* Increase the gap to add spacing between bars */
+    cursor: pointer;
+    position: absolute;
+    top: 0.5vh; /* Shift hamburger icon further upwards */
+    left: 1.5vw; /* Shift hamburger icon more to the left */
+    z-index: 10; /* Ensure it stays on top of the navbar */
+  }
+
+  .hamburger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px; /* Rounded corners for the bars */
+  }
+
+}
+
+/* For even smaller screens (e.g., mobile phones below 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    width: 95vw; /* Take more space on very small screens */
+    top: 3vh; /* Adjust the navbar position */
+  }
+
+  .logo .name {
+    font-size: 5vw; /* Make logo smaller on mobile */
+    margin-bottom: 0.8rem; /* Less space between logo and items */
+  }
+
+  .nav-item {
+    font-size: 1.1rem; /* Further reduce font size */
+    padding: 1em 2rem; /* Adjust padding */
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 1em; /* Less gap between navbar items */
+  }
+
+
+  /* Terminal Styling */
+  .terminal {
+    width: 100vw; /* Set width to the full viewport width */
+    height: 100vh; /* Make the terminal take the full viewport height */
+    overflow: hidden; /* Remove scrollbars */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1f21; /* Adjust the background color for a terminal look */
+    color: #00ff00; /* Text color */
+    padding: 2rem; /* Add some padding around the terminal content */
+    box-sizing: border-box;
+  }
+
+  /* To ensure the terminal content fits properly inside */
+  .terminal-content {
+    max-width: 100%; /* Ensure content does not overflow */
+    overflow: auto; /* In case content is too large, make it scrollable vertically */
+    word-wrap: break-word; /* Break long words to avoid horizontal scrolling */
+    padding: 1rem;
+  }
+}
+
+/* For smaller devices */
+@media (max-width: 768px) {
+  .terminal {
+    padding: 1rem; /* Adjust padding on smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal {
+    padding: 0.5rem; /* Less padding on very small screens */
   }
 }
