@@ -27,12 +27,12 @@
     margin-left: 1rem;
 }
 
-.location, .phone, .email {
+.location, .email {
     display: flex;
     margin-bottom: 1rem;
 }
 
-.location p, .phone p, .email p {
+.location p, .email p {
     line-height: 1.5;
 }
 
