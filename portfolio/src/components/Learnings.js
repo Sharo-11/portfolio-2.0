@@ -45,7 +45,16 @@ const Learnings = () => {
       title: 'Preparing for eJPT Exam', 
       description: 'I am actively preparing for the eJPT (Junior Penetration Tester) certification, which involves gaining hands-on skills in real-world penetration testing scenarios. To strengthen my knowledge, I am engaging in platforms like TryHackMe, PicoCTF, and PortSwigger. These platforms are helping me sharpen my skills in areas such as vulnerability exploitation, web application attacks, network security, and penetration testing methodologies, giving me a solid foundation in cybersecurity and Red Team techniques.', 
       date: 'Jun 2024',
-      certificateUrl: "https://drive.google.com/file/d/1tpulRGCy3vL9gK_tns6NZTAgFMSIlgFQ/view?usp=sharing" }
+      certificateUrl: "https://drive.google.com/file/d/1tpulRGCy3vL9gK_tns6NZTAgFMSIlgFQ/view?usp=sharing" 
+    },
+    { 
+      id: 7, 
+      title: 'Smart India Hackathon 2024 Grand Finalist', 
+      description: 'What an electrifying experience it has been! Reaching the Grand Finals of Smart India Hackathon (SIH) 2024 - Software Edition at IIT Kharagpur was truly a dream come true for me and my team. As the team leader, I had the privilege of guiding an incredible team through this intense journey. While we didn’t take the win, the knowledge, skills, and opportunities we gained were absolutely invaluable. Our project, CyberFeed, aimed to provide real-time feeds on cyber incidents impacting Indian cyberspace. With live data feeds, detailed analysis, AI-driven consultations, and automated report generation, we pushed the boundaries of cybersecurity innovation. This experience has only amplified my passion for cybersecurity and made me more excited than ever to keep learning, growing, and making a real impact in this field. A huge thank you to IIT Kharagpur and NTRO for providing us with this amazing platform!',
+      date: 'Dec 2024',
+      certificateUrl: ''
+    }
+        
   ];
 
   // State to keep track of the selected learning
