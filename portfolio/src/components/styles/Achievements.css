@@ -9,6 +9,12 @@
   color: white;
 }
 
+h2{
+  font-size: 3rem;
+  height: fit-content;
+  
+}
+
 .ach-container {
   position: absolute; /* Position absolutely, but within the .ach-section */
   left: 50%;
@@ -32,7 +38,6 @@
   height: 300px;
   background-position: 50% 50%;
   display: inline-block;
-  transition: 0.5s;
   background-size: cover;
   position: absolute;
   z-index: 1;
@@ -40,6 +45,10 @@
   transform: translate(0, -50%);
   border-radius: 20px;
   box-shadow: 0 30px 50px #505050;
+  left: 50%; /* Center all cards */
+  transform: translate(-50%, -50%); /* Ensure they align at the center */
+  opacity: 0; /* Hide all cards by default */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
 }
 
 .ach-item:nth-child(1),
@@ -51,23 +60,16 @@
   width: 100%;
   height: 100%;
   box-shadow: none;
-}
+} 
 
 .ach-item:nth-child(3) {
   left: 50%;
 }
 
-.ach-item:nth-child(4) {
-  left: calc(50% + 220px);
-}
-
-.ach-item:nth-child(5) {
-  left: calc(50% + 440px);
-}
-
+.ach-item:nth-child(4),
+.ach-item:nth-child(5),
 .ach-item:nth-child(n+6) {
-  left: calc(50% + 660px);
-  opacity: 0;
+  display: none; /* Hide all non-current and unnecessary cards */
 }
 
 .ach-content {
@@ -84,6 +86,16 @@
   display: none;
   font-family: system-ui;
   z-index: 10000; /* Higher z-index to ensure content is above buttons */
+}
+
+.ach-item.ach-current {
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%) scale(1.05); /* Ensure it's centered and slightly enlarged */
+  z-index: 2; /* Bring the current card to the top */
+  opacity: 1; /* Fully visible */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transitions */
 }
 
 .ach-item.ach-current .ach-content {

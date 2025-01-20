@@ -5,6 +5,12 @@ const Achievements = () => {
   const [items, setItems] = useState([
     { backgroundImage: require('./assets/images/SANS_Webinar.jpg'), name: 'SANS Webinar', des: 'Enhanced cybersecurity knowledge through advanced techniques in threat detection and defense strategies. Covered key concepts in digital forensics and incident response.', cert_url : "https://drive.google.com/file/d/1gb211ZGlKqwCDcKHyJdN0MMDyPocuF1T/view?usp=sharing" },
     { backgroundImage: require('./assets/images/TSEC_Hackathon.jpg'), name: 'TSEC Hackathon', des: 'Collaborated with a team to develop creative solutions to real-world challenges. Focused on efficient coding practices and delivered a working prototype within a competitive timeframe.', cert_url: "https://drive.google.com/file/d/1n0UboWDNdbodq-AQVNqyWbSNO4RgqtKO/view?usp=sharing" },
+    {
+      backgroundImage: require('./assets/images/SIH_2024.png'),
+      name: 'SIH 2024',
+      des: 'Led a team to build an AI-driven cybersecurity platform for real-time incident tracking. I contributed to the development of a feature for generating detailed reports.',
+      cert_url: "https://drive.google.com/file/d/1GWrxwPgpmeb5uQBVL68TYzKLx61uxYck/view?usp=sharing"
+    },
   ]);
 
   const nextSlide = () => {
