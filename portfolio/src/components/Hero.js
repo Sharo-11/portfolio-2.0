@@ -33,6 +33,7 @@ const Hero = () => {
           <div className="terminal-body">
             <p><span className="username">Sharvari@Kali</span>: Is your Digital fortress secure enough?</p>
             <p><span className="username">Sharvari@Kali</span>: Find out how my skills in cybersecurity can protect your assets.</p>
+            <p><span className="username">Sharvari@Kali</span>: Codename: Astra—because every fortress needs its secret weapon. </p>
           </div>
         </div>
       </div>
